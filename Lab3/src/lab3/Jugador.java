@@ -19,9 +19,8 @@ public class Jugador {
     private int anos;
     private double peso;
     private int hp;
-    private String arma;
 
-    public Jugador(String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp, String arma) {
+    public Jugador(String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp) {
         this.nombre = nombre;
         this.nacionalidad = nacionalidad;
         this.raza = raza;
@@ -31,7 +30,6 @@ public class Jugador {
         this.anos = anos;
         this.peso = peso;
         this.hp = hp;
-        this.arma = arma;
     }
 
     @Override
@@ -104,14 +102,8 @@ public class Jugador {
     public void setHp(int hp) {
         this.hp = hp;
     }
-
-    public String getArma() {
-        return arma;
-    }
-
-    public void setArma(String arma) {
-        this.arma = arma;
-    }
-
     
+    public void print() {
+        System.out.println("");
+    }
 }

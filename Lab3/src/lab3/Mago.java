@@ -14,9 +14,10 @@ public class Mago extends Jugador{
     private int ac = 20;
     private int cs = 0;
     private int dg = 5 + r.nextInt(5);
+    private String magia;
 
-    public Mago(String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp, String arma) {
-        super(nombre, nacionalidad, raza, tipo, descripcion, estatura, anos, peso, hp, arma);
+    public Mago(String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp, String magia) {
+        super(nombre, nacionalidad, raza, tipo, descripcion, estatura, anos, peso, hp);
     }
 
     @Override
@@ -48,4 +49,16 @@ public class Mago extends Jugador{
         this.dg = dg;
     }
 
+    public String getMagia() {
+        return magia;
+    }
+
+    public void setMagia(String magia) {
+        this.magia = magia;
+    }
+
+    @Override
+    public void print() {
+        System.out.println("ac: " + ac + " cs: : " + cs + " dg: " + dg + " Magia: " + magia);
+    }
 }

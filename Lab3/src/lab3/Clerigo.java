@@ -16,10 +16,16 @@ public class Clerigo extends Jugador{
     private int ac = 40;
     private int cs = 97;
     private int dg = 5 + r.nextInt(15);
+    private String dem;
+    private String tipoinv;
 
-    public Clerigo(String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp, String arma) {
-        super(nombre, nacionalidad, raza, tipo, descripcion, estatura, anos, peso, hp, arma);
+    public Clerigo(String dem, String tipoinv, String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp) {
+        super(nombre, nacionalidad, raza, tipo, descripcion, estatura, anos, peso, hp);
+        this.dem = dem;
+        this.tipoinv = tipoinv;
     }
+
+    
 
     @Override
     public String toString() {
@@ -50,5 +56,24 @@ public class Clerigo extends Jugador{
         this.dg = dg;
     }
 
-    
+    public String getDem() {
+        return dem;
+    }
+
+    public void setDem(String dem) {
+        this.dem = dem;
+    }
+
+    public String getTipoinv() {
+        return tipoinv;
+    }
+
+    public void setTipoinv(String tipoinv) {
+        this.tipoinv = tipoinv;
+    }
+
+    @Override
+    public void print() {
+        System.out.println("ac: " + ac + " cs: : " + cs + " dg: " + dg + " Demonio: " + dem + " Tipo de invocacion" + tipoinv);
+    }
 }

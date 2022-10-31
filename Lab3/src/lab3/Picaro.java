@@ -14,9 +14,11 @@ public class Picaro extends Jugador{
     private int ac = 50;
     private int cs = 80;
     private int dg = 15 + r.nextInt(10);;
+    private String instrumento;
+    private int cantrob;
 
-    public Picaro(String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp, String arma) {
-        super(nombre, nacionalidad, raza, tipo, descripcion, estatura, anos, peso, hp, arma);
+    public Picaro(String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp, String instrumento, int cantrob) {
+        super(nombre, nacionalidad, raza, tipo, descripcion, estatura, anos, peso, hp);
     }
 
     @Override
@@ -48,5 +50,25 @@ public class Picaro extends Jugador{
         this.ac = ac;
     }
 
+    public String getInstrumento() {
+        return instrumento;
+    }
+
+    public void setInstrumento(String instrumento) {
+        this.instrumento = instrumento;
+    }
+
+    public int getCantrob() {
+        return cantrob;
+    }
+
+    public void setCantrob(int cantrob) {
+        this.cantrob = cantrob;
+    }
     
+
+    @Override
+    public void print() {
+        System.out.println("ac: " + ac + " cs: : " + cs + " dg: " + dg + " Instrumento: " + instrumento + " Cantidades de robos: " + cantrob);
+    }
 }

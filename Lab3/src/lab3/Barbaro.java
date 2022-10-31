@@ -14,14 +14,11 @@ public class Barbaro extends Jugador{
     private int ac = 65;
     private int cs = 93;
     private int dg = 15 + r.nextInt(15);
+    private String arma;
+    private int xp;
 
-    public Barbaro(String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp, String arma) {
-        super(nombre, nacionalidad, raza, tipo, descripcion, estatura, anos, peso, hp, arma);
-    }
-
-    @Override
-    public String toString() {
-        return "Picaro{" +" ac=" + ac + ", cs=" + cs + ", dg=" + dg + '}';
+    public Barbaro(String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp, String arma, int xp) {
+        super(nombre, nacionalidad, raza, tipo, descripcion, estatura, anos, peso, hp);
     }
     
     public int getAc() {
@@ -48,7 +45,26 @@ public class Barbaro extends Jugador{
         this.dg = dg;
     }
 
-    
+    public String getArma() {
+        return arma;
+    }
+
+    public void setArma(String arma) {
+        this.arma = arma;
+    }
+
+    public int getXp() {
+        return xp;
+    }
+
+    public void setXp(int xp) {
+        this.xp = xp;
+    }
+
+    @Override
+    public void print() {
+        System.out.println("ac: " + ac + " cs: : " + cs + " dg: " + dg + " Arma: " + arma + " cantidad de xp: " + xp);
+    }
 
     
 }
