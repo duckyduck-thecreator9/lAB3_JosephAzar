@@ -15,14 +15,18 @@ public class Mago extends Jugador{
     private int cs = 0;
     private int dg = 5 + r.nextInt(5);
     private String magia;
+    private String Habilidad;
 
-    public Mago(String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp, String magia) {
+    public Mago(String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp, String magia, String Habilidad) {
         super(nombre, nacionalidad, raza, tipo, descripcion, estatura, anos, peso, hp);
     }
 
-    @Override
-    public String toString() {
-       return "Picaro{" + " ac=" + ac + ", cs=" + cs + ", dg=" + dg + '}';
+    public String getHabilidad() {
+        return Habilidad;
+    }
+
+    public void setHabilidad(String Habilidad) {
+        this.Habilidad = Habilidad;
     }
     
     public int getAc() {
@@ -59,6 +63,6 @@ public class Mago extends Jugador{
 
     @Override
     public void print() {
-        System.out.println("ac: " + ac + " cs: : " + cs + " dg: " + dg + " Magia: " + magia);
+        System.out.println("ac: " + ac + " cs: : " + cs + " dg: " + dg + " Magia: " + magia + " Habilidad: " + Habilidad);
     }
 }

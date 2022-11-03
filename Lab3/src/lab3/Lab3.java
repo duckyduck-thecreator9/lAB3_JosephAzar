@@ -109,59 +109,226 @@ public class Lab3 {
                                         + "3. Escudo");
                                 int x = lea.nextInt();
                                 String arma = "";
-                                if (x == 1) {
-                                   arma = "Pesada"; 
+                                switch (x) {
+                                    case 1: {
+                                        arma = "Pesada";
                                 }
-                                if (x == 2) {
-                                   arma = "Ligera"; 
-                                }
-                                if (x == 3) {
-                                   arma = "Escudo"; 
+                                    break;
+                                    case 2: {
+                                        arma = "Ligera";
+                                    }
+                                    break;
+                                    case 3: {
+                                        arma = "Escudo";
+                                    }
+                                    break;
                                 }
                                 System.out.println("Ingrese la cantidad de xp");
                                 int xp = lea.nextInt();
-                                Barbaro b = new Barbaro(nombre, nacionalidad, "Mediano", "Barbaro", descripcion,  estatura, anos, peso, hp, arma, xp);
-                                b.setArma(arma);
+                                System.out.println("que tipo va a querer ser?\n"
+                                        + "1. Lead\n"
+                                        + "2. Suport\n"
+                                        + "3. Offensive\n");
+                                String abilidad = "";
+                                int opa = lea.nextInt();
+                                Barbaro b = new Barbaro(nombre, nacionalidad, "Mediano", "Barbaro", descripcion,  estatura, anos, peso, hp, arma, xp, "Support");
                                 b.setXp(xp);
+                                double temp;
+                                switch (opa) {
+                                    case 1: {
+                                    temp = b.getCs() * 0.05;
+                                    b.setCs(b.getCs() + (int) temp);
+                                    b.setAbilidad("Lead");  
+                                    }
+                                    break;
+                                    case 2: {
+                                    temp = b.getCs() * 0.02;
+                                    b.setCs(b.getCs() + (int) temp);
+                                    b.setAbilidad("Support");  
+                                    }
+                                    break;
+                                    case 3: {
+                                        temp = b.getHp() * 0.01;
+                                    int n = (int) temp;
+                                    b.setHp(b.getHp() - n);
+                                    b.setAbilidad("Offensive");
+                                    }
+                                    break;
+                                }
                                 jugadores.add(b);
                             }
                             break;
                             
                             case 2: {
                                 hp = 80 + r.nextInt(20);
-                                System.out.println("Ingrese el arma");
-                                String arma = lea.next();
+                                System.out.println("Cual arma va a queres\n"
+                                        + "1. Pesada\n"
+                                        + "2. Ligera\n"
+                                        + "3. Escudo");
+                                int x = lea.nextInt();
+                                String arma = "";
+                                switch (x) {
+                                    case 1: {
+                                        arma = "Pesada";
+                                }
+                                    break;
+                                    case 2: {
+                                        arma = "Ligera";
+                                    }
+                                    break;
+                                    case 3: {
+                                        arma = "Escudo";
+                                    }
+                                    break;
+                                }
                                 System.out.println("Ingrese la cantidad de xp");
                                 int xp = lea.nextInt();
-                                Barbaro b = new Barbaro(nombre, nacionalidad, "Mediano", "Barbaro", descripcion,  estatura, anos, peso, hp, arma, xp);
-                                b.setArma(arma);
+                                System.out.println("que tipo va a querer ser?\n"
+                                        + "1. Lead\n"
+                                        + "2. Suport\n"
+                                        + "3. Offensive\n");
+                                String abilidad = "";
+                                int opa = lea.nextInt();
+                                Barbaro b = new Barbaro(nombre, nacionalidad, "Mediano", "Barbaro", descripcion,  estatura, anos, peso, hp, arma, xp, "Support");
                                 b.setXp(xp);
+                                double temp;
+                                switch (opa) {
+                                    case 1: {
+                                    temp = b.getCs() * 0.05;
+                                    b.setCs(b.getCs() + (int) temp);
+                                    b.setAbilidad("Lead");  
+                                    }
+                                    break;
+                                    case 2: {
+                                    temp = b.getCs() * 0.02;
+                                    b.setCs(b.getCs() + (int) temp);
+                                    b.setAbilidad("Support");  
+                                    }
+                                    break;
+                                    case 3: {
+                                        temp = b.getHp() * 0.01;
+                                    int n = (int) temp;
+                                    b.setHp(b.getHp() - n);
+                                    b.setAbilidad("Offensive");
+                                    }
+                                    break;
+                                }
                                 jugadores.add(b);
                             }
                             break;
                             
                             case 3: {
                                 hp = 50 + r.nextInt(20);
-                                System.out.println("Ingrese el arma");
-                                String arma = lea.next();
+                                System.out.println("Cual arma va a queres\n"
+                                        + "1. Pesada\n"
+                                        + "2. Ligera\n"
+                                        + "3. Escudo");
+                                int x = lea.nextInt();
+                                String arma = "";
+                                switch (x) {
+                                    case 1: {
+                                        arma = "Pesada";
+                                }
+                                    break;
+                                    case 2: {
+                                        arma = "Ligera";
+                                    }
+                                    break;
+                                    case 3: {
+                                        arma = "Escudo";
+                                    }
+                                    break;
+                                }
                                 System.out.println("Ingrese la cantidad de xp");
                                 int xp = lea.nextInt();
-                                Barbaro b = new Barbaro(nombre, nacionalidad, "Mediano", "Barbaro", descripcion,  estatura, anos, peso, hp, arma, xp);
-                                b.setArma(arma);
+                                System.out.println("que tipo va a querer ser?\n"
+                                        + "1. Lead\n"
+                                        + "2. Suport\n"
+                                        + "3. Offensive\n");
+                                String abilidad = "";
+                                int opa = lea.nextInt();
+                                Barbaro b = new Barbaro(nombre, nacionalidad, "Mediano", "Barbaro", descripcion,  estatura, anos, peso, hp, arma, xp, "Support");
                                 b.setXp(xp);
+                                double temp;
+                                switch (opa) {
+                                    case 1: {
+                                    temp = b.getCs() * 0.05;
+                                    b.setCs(b.getCs() + (int) temp);
+                                    b.setAbilidad("Lead");  
+                                    }
+                                    break;
+                                    case 2: {
+                                    temp = b.getCs() * 0.02;
+                                    b.setCs(b.getCs() + (int) temp);
+                                    b.setAbilidad("Support");  
+                                    }
+                                    break;
+                                    case 3: {
+                                        temp = b.getHp() * 0.01;
+                                    int n = (int) temp;
+                                    b.setHp(b.getHp() - n);
+                                    b.setAbilidad("Offensive");
+                                    }
+                                    break;
+                                }
                                 jugadores.add(b);
                             }
                             break;
                             
                             case 4: {
                                 hp = 40 + r.nextInt(25);
-                                System.out.println("Ingrese el arma");
-                                String arma = lea.next();
+                                System.out.println("Cual arma va a queres\n"
+                                        + "1. Pesada\n"
+                                        + "2. Ligera\n"
+                                        + "3. Escudo");
+                                int x = lea.nextInt();
+                                String arma = "";
+                                switch (x) {
+                                    case 1: {
+                                        arma = "Pesada";
+                                }
+                                    break;
+                                    case 2: {
+                                        arma = "Ligera";
+                                    }
+                                    break;
+                                    case 3: {
+                                        arma = "Escudo";
+                                    }
+                                    break;
+                                }
                                 System.out.println("Ingrese la cantidad de xp");
                                 int xp = lea.nextInt();
-                                Barbaro b = new Barbaro(nombre, nacionalidad, "Mediano", "Barbaro", descripcion,  estatura, anos, peso, hp, arma, xp);
-                                b.setArma(arma);
+                                System.out.println("que tipo va a querer ser?\n"
+                                        + "1. Lead\n"
+                                        + "2. Suport\n"
+                                        + "3. Offensive\n");
+                                String abilidad = "";
+                                int opa = lea.nextInt();
+                                Barbaro b = new Barbaro(nombre, nacionalidad, "Mediano", "Barbaro", descripcion,  estatura, anos, peso, hp, arma, xp, "Support");
                                 b.setXp(xp);
+                                double temp;
+                                switch (opa) {
+                                    case 1: {
+                                    temp = b.getCs() * 0.05;
+                                    b.setCs(b.getCs() + (int) temp);
+                                    b.setAbilidad("Lead");  
+                                    }
+                                    break;
+                                    case 2: {
+                                    temp = b.getCs() * 0.02;
+                                    b.setCs(b.getCs() + (int) temp);
+                                    b.setAbilidad("Support");  
+                                    }
+                                    break;
+                                    case 3: {
+                                        temp = b.getHp() * 0.01;
+                                    int n = (int) temp;
+                                    b.setHp(b.getHp() - n);
+                                    b.setAbilidad("Offensive");
+                                    }
+                                    break;
+                                }
                                 jugadores.add(b);
                             }
                             break;
@@ -175,7 +342,7 @@ public class Lab3 {
                                 + "1. Mediano\n"
                                 + "2. Enano\n"
                                 + "3. Elfo\n"
-                                + "3. Humano\n");
+                                + "4. Humano\n");
                         int op = lea.nextInt();
                         
                         switch (op) {
@@ -185,9 +352,12 @@ public class Lab3 {
                                 String dem = lea.next();
                                 System.out.println("Cual es el tipo de invocacion");
                                 String tipoinv = lea.next();
-                                Clerigo c = new Clerigo(dem, tipoinv, nombre, nacionalidad, "Mediano", "Clerigo", descripcion,  estatura, anos, peso, hp);
+                                Clerigo c = new Clerigo(dem, tipoinv, nombre, nacionalidad, "Mediano", "Clerigo", descripcion,  estatura, anos, peso, hp, "lead");
                                 c.setTipoinv(tipoinv);
                                 c.setDem(dem);
+                                double temp = c.getCs() * 0.05;
+                                c.setCs(c.getCs() + (int) temp);
+                                c.setHabilidad("Lead");
                                 jugadores.add(c);
                             }
                             break;
@@ -197,9 +367,12 @@ public class Lab3 {
                                 String dem = lea.next();
                                 System.out.println("Cual es el tipo de invocacion");
                                 String tipoinv = lea.next();
-                                Clerigo c = new Clerigo(dem, tipoinv, nombre, nacionalidad, "Mediano", "Clerigo", descripcion,  estatura, anos, peso, hp);
+                                Clerigo c = new Clerigo(dem, tipoinv, nombre, nacionalidad, "Mediano", "Clerigo", descripcion,  estatura, anos, peso, hp, "lead");
                                 c.setTipoinv(tipoinv);
                                 c.setDem(dem);
+                                double temp = c.getCs() * 0.05;
+                                c.setCs(c.getCs() + (int) temp);
+                                c.setHabilidad("Lead");
                                 jugadores.add(c);
                             }
                             break;
@@ -209,9 +382,12 @@ public class Lab3 {
                                 String dem = lea.next();
                                 System.out.println("Cual es el tipo de invocacion");
                                 String tipoinv = lea.next();
-                                Clerigo c = new Clerigo(dem, tipoinv, nombre, nacionalidad, "Mediano", "Clerigo", descripcion,  estatura, anos, peso, hp);
+                                Clerigo c = new Clerigo(dem, tipoinv, nombre, nacionalidad, "Mediano", "Clerigo", descripcion,  estatura, anos, peso, hp, "lead");
                                 c.setTipoinv(tipoinv);
                                 c.setDem(dem);
+                                double temp = c.getCs() * 0.05;
+                                c.setCs(c.getCs() + (int) temp);
+                                c.setHabilidad("Lead");
                                 jugadores.add(c);
                             }
                             break;
@@ -221,9 +397,12 @@ public class Lab3 {
                                 String dem = lea.next();
                                 System.out.println("Cual es el tipo de invocacion");
                                 String tipoinv = lea.next();
-                                Clerigo c = new Clerigo(dem, tipoinv, nombre, nacionalidad, "Mediano", "Clerigo", descripcion,  estatura, anos, peso, hp);
+                                Clerigo c = new Clerigo(dem, tipoinv, nombre, nacionalidad, "Mediano", "Clerigo", descripcion,  estatura, anos, peso, hp, "lead");
                                 c.setTipoinv(tipoinv);
                                 c.setDem(dem);
+                                double temp = c.getCs() * 0.05;
+                                c.setCs(c.getCs() + (int) temp);
+                                c.setHabilidad("Lead");
                                 jugadores.add(c);
                             }
                             break;
@@ -257,9 +436,28 @@ public class Lab3 {
                                 if (opi == 3) {
                                     magia = "MagoBlanco";
                                 }
-                                
-                                Mago m = new Mago(nombre, nacionalidad, "Mediano", "Mago", descripcion,  estatura, anos, peso, hp, magia);
+                                System.out.println("que tipo va a querer ser?\n"
+                                        + "1. Support\n"
+                                        + "2. Tank\n");
+                                String abilidad = "";
+                                int opa = lea.nextInt();
+                                Mago m = new Mago(nombre, nacionalidad, "Mediano", "Mago", descripcion,  estatura, anos, peso, hp, magia, abilidad);
                                 m.setMagia(magia);
+                                double temp = 0;
+                                switch (opa) {
+                                case 1: {
+                                    temp = m.getCs() * 0.02;
+                                    m.setCs(m.getCs() + (int) temp);
+                                    m.setHabilidad("Support");
+                                }
+                                break;
+                                case 2: {
+                                    temp = m.getHp() * 0.02;
+                                    m.setHp(m.getHp() + (int) temp);
+                                    m.setHabilidad("Tank");
+                                }
+                                break;
+                                }
                                 jugadores.add(m);
                             }
                             break;
@@ -282,8 +480,28 @@ public class Lab3 {
                                     magia = "MagoBlanco";
                                 }
                                 
-                                Mago m = new Mago(nombre, nacionalidad, "Mediano", "Mago", descripcion,  estatura, anos, peso, hp, magia);
+                                System.out.println("que tipo va a querer ser?\n"
+                                        + "1. Support\n"
+                                        + "2. Tank\n");
+                                String abilidad = "";
+                                int opa = lea.nextInt();
+                                Mago m = new Mago(nombre, nacionalidad, "Mediano", "Mago", descripcion,  estatura, anos, peso, hp, magia, abilidad);
                                 m.setMagia(magia);
+                                double temp = 0;
+                                switch (opa) {
+                                case 1: {
+                                    temp = m.getCs() * 0.02;
+                                    m.setCs(m.getCs() + (int) temp);
+                                    m.setHabilidad("Support");
+                                }
+                                break;
+                                case 2: {
+                                    temp = m.getHp() * 0.02;
+                                    m.setHp(m.getHp() + (int) temp);
+                                    m.setHabilidad("Tank");
+                                }
+                                break;
+                                }
                                 jugadores.add(m);
                             }
                             break;
@@ -306,8 +524,28 @@ public class Lab3 {
                                     magia = "MagoBlanco";
                                 }
                                 
-                                Mago m = new Mago(nombre, nacionalidad, "Mediano", "Mago", descripcion,  estatura, anos, peso, hp, magia);
+                                System.out.println("que tipo va a querer ser?\n"
+                                        + "1. Support\n"
+                                        + "2. Tank\n");
+                                String abilidad = "";
+                                int opa = lea.nextInt();
+                                Mago m = new Mago(nombre, nacionalidad, "Mediano", "Mago", descripcion,  estatura, anos, peso, hp, magia, abilidad);
                                 m.setMagia(magia);
+                                double temp = 0;
+                                switch (opa) {
+                                case 1: {
+                                    temp = m.getCs() * 0.02;
+                                    m.setCs(m.getCs() + (int) temp);
+                                    m.setHabilidad("Support");
+                                }
+                                break;
+                                case 2: {
+                                    temp = m.getHp() * 0.02;
+                                    m.setHp(m.getHp() + (int) temp);
+                                    m.setHabilidad("Tank");
+                                }
+                                break;
+                                }
                                 jugadores.add(m);
                             }
                             break;
@@ -330,8 +568,28 @@ public class Lab3 {
                                     magia = "MagoBlanco";
                                 }
                                 
-                                Mago m = new Mago(nombre, nacionalidad, "Mediano", "Mago", descripcion,  estatura, anos, peso, hp, magia);
+                                System.out.println("que tipo va a querer ser?\n"
+                                        + "1. Support\n"
+                                        + "2. Tank\n");
+                                String abilidad = "";
+                                int opa = lea.nextInt();
+                                Mago m = new Mago(nombre, nacionalidad, "Mediano", "Mago", descripcion,  estatura, anos, peso, hp, magia, abilidad);
                                 m.setMagia(magia);
+                                double temp = 0;
+                                switch (opa) {
+                                case 1: {
+                                    temp = m.getCs() * 0.02;
+                                    m.setCs(m.getCs() + (int) temp);
+                                    m.setHabilidad("Support");
+                                }
+                                break;
+                                case 2: {
+                                    temp = m.getHp() * 0.02;
+                                    m.setHp(m.getHp() + (int) temp);
+                                    m.setHabilidad("Tank");
+                                }
+                                break;
+                                }
                                 jugadores.add(m);
                             }
                             break;
@@ -367,9 +625,29 @@ public class Lab3 {
                                 }
                                 System.out.println("Ingrese la cantidad de robos exitosos");
                                 int cantrob = lea.nextInt();
-                                Picaro p = new Picaro(nombre, nacionalidad, "Mediano", "Picaro", descripcion,  estatura, anos, peso, hp, instrumento, cantrob);
+                                System.out.println("que tipo va a querer ser?\n"
+                                        + "1. Spammer\n"
+                                        + "2. Tank\n");
+                                String abilidad = "";
+                                int opa = lea.nextInt();
+                                Picaro p = new Picaro(nombre, nacionalidad, "Mediano", "Picaro", descripcion,  estatura, anos, peso, hp, instrumento, cantrob, abilidad);
                                 p.setInstrumento(instrumento);
                                 p.setCantrob(cantrob);
+                                double temp = 0;
+                                switch (opa) {
+                                    case 1: {
+                                    temp = p.getCs() * 0.02;
+                                    p.setCs(p.getCs() + (int) temp);
+                                    p.setHabilidad("Spammer");
+                                }
+                                break;
+                                    case 2: {
+                                    temp = p.getCs()* 0.01;
+                                    p.setCs(p.getCs() - (int) temp);
+                                    p.setHabilidad("Tank");
+                                }
+                                    break;
+                                }
                                 jugadores.add(p);
                             }
                             break;
@@ -393,9 +671,29 @@ public class Lab3 {
                                 }
                                 System.out.println("Ingrese la cantidad de robos exitosos");
                                 int cantrob = lea.nextInt();
-                                Picaro p = new Picaro(nombre, nacionalidad, "Mediano", "Picaro", descripcion,  estatura, anos, peso, hp, instrumento, cantrob);
+                                System.out.println("que tipo va a querer ser?\n"
+                                        + "1. Spammer\n"
+                                        + "2. Tank\n");
+                                String abilidad = "";
+                                int opa = lea.nextInt();
+                                Picaro p = new Picaro(nombre, nacionalidad, "Mediano", "Picaro", descripcion,  estatura, anos, peso, hp, instrumento, cantrob, abilidad);
                                 p.setInstrumento(instrumento);
                                 p.setCantrob(cantrob);
+                                double temp = 0;
+                                switch (opa) {
+                                    case 1: {
+                                    temp = p.getCs() * 0.02;
+                                    p.setCs(p.getCs() + (int) temp);
+                                    p.setHabilidad("Spammer");
+                                }
+                                break;
+                                    case 2: {
+                                    temp = p.getCs()* 0.01;
+                                    p.setCs(p.getCs() - (int) temp);
+                                    p.setHabilidad("Tank");
+                                }
+                                    break;
+                                }
                                 jugadores.add(p);
                             }
                             break;
@@ -419,9 +717,29 @@ public class Lab3 {
                                 }
                                 System.out.println("Ingrese la cantidad de robos exitosos");
                                 int cantrob = lea.nextInt();
-                                Picaro p = new Picaro(nombre, nacionalidad, "Mediano", "Picaro", descripcion,  estatura, anos, peso, hp, instrumento, cantrob);
+                                System.out.println("que tipo va a querer ser?\n"
+                                        + "1. Spammer\n"
+                                        + "2. Tank\n");
+                                String abilidad = "";
+                                int opa = lea.nextInt();
+                                Picaro p = new Picaro(nombre, nacionalidad, "Mediano", "Picaro", descripcion,  estatura, anos, peso, hp, instrumento, cantrob, abilidad);
                                 p.setInstrumento(instrumento);
                                 p.setCantrob(cantrob);
+                                double temp = 0;
+                                switch (opa) {
+                                    case 1: {
+                                    temp = p.getCs() * 0.02;
+                                    p.setCs(p.getCs() + (int) temp);
+                                    p.setHabilidad("Spammer");
+                                }
+                                break;
+                                    case 2: {
+                                    temp = p.getCs()* 0.01;
+                                    p.setCs(p.getCs() - (int) temp);
+                                    p.setHabilidad("Tank");
+                                }
+                                    break;
+                                }
                                 jugadores.add(p);
                             }
                             break;
@@ -445,9 +763,29 @@ public class Lab3 {
                                 }
                                 System.out.println("Ingrese la cantidad de robos exitosos");
                                 int cantrob = lea.nextInt();
-                                Picaro p = new Picaro(nombre, nacionalidad, "Mediano", "Picaro", descripcion,  estatura, anos, peso, hp, instrumento, cantrob);
+                                System.out.println("que tipo va a querer ser?\n"
+                                        + "1. Spammer\n"
+                                        + "2. Tank\n");
+                                String abilidad = "";
+                                int opa = lea.nextInt();
+                                Picaro p = new Picaro(nombre, nacionalidad, "Mediano", "Picaro", descripcion,  estatura, anos, peso, hp, instrumento, cantrob, abilidad);
                                 p.setInstrumento(instrumento);
                                 p.setCantrob(cantrob);
+                                double temp = 0;
+                                switch (opa) {
+                                    case 1: {
+                                    temp = p.getCs() * 0.02;
+                                    p.setCs(p.getCs() + (int) temp);
+                                    p.setHabilidad("Spammer");
+                                }
+                                break;
+                                    case 2: {
+                                    temp = p.getCs()* 0.01;
+                                    p.setCs(p.getCs() - (int) temp);
+                                    p.setHabilidad("Tank");
+                                }
+                                    break;
+                                }
                                 jugadores.add(p);
                             }
                             break;
@@ -942,8 +1280,132 @@ public class Lab3 {
         break;
         
         case 5: {
-              //Otro dia men que hueva  
+            System.out.println("Que jugador desea controlar?\n"
+                    + "Tiene que ser 0 o 1\n");
+            
+              for (Object t: jugadores) {
+                    
+                    System.out.println("\n" + jugadores.indexOf(t) + ".- " + ((Jugador)t).toString());
+                    if (jugadores.get(jugadores.indexOf(t)) instanceof Barbaro) {
+                    ((Barbaro)t).print();
+                    }
+                    if (jugadores.get(jugadores.indexOf(t)) instanceof Clerigo) {
+                    ((Clerigo)t).print();
+                    }
+                    if (jugadores.get(jugadores.indexOf(t)) instanceof Mago) {
+                    ((Mago)t).print();
+                    }
+                    if (jugadores.get(jugadores.indexOf(t)) instanceof Picaro) {
+                    ((Picaro)t).print();
+                    }
+                    System.out.println("");
+                    }  
+              int op = lea.nextInt();
+              
+              if (op == 0) {
+                  int bot = 1;
+              }
+              if (op == 1) {
+                  int bot = 0;
+              }
+              int ac = 0;
+              if (jugadores.get(op) instanceof Barbaro) {
+                      ac = ((Barbaro)jugadores.get(op)).getAc();
+                  }
+                  if (jugadores.get(op) instanceof Clerigo) {
+                      ac = ((Clerigo)jugadores.get(op)).getAc();
+                  }
+                  if (jugadores.get(op) instanceof Mago) {
+                      ac = ((Mago)jugadores.get(op)).getAc();
+                  }
+                  if (jugadores.get(op) instanceof Picaro) {
+                      ac = ((Picaro)jugadores.get(op)).getAc();
+                  }
+//              boolean combate = true;
+//              while (combate == true) {
+
+              // resetear el ac             
+              if (jugadores.get(op) instanceof Barbaro) {
+                      ((Barbaro)jugadores.get(op)).setAc(ac);
+                  }
+                  if (jugadores.get(op) instanceof Clerigo) {
+                      ((Clerigo)jugadores.get(op)).setAc(ac);
+                  }
+                  if (jugadores.get(op) instanceof Mago) {
+                      ((Mago)jugadores.get(op)).setAc(ac);
+                  }
+                  if (jugadores.get(op) instanceof Picaro) {
+                      ((Picaro)jugadores.get(op)).setAc(ac);
+                  }
+              // fin de ac
+              
+              if (jugadores.get(op) instanceof Barbaro) {
+              if (((Barbaro)jugadores.get(op)).getAbilidad().contentEquals("Support")) {
+                  double temp = ((Barbaro)jugadores.get(op)).getAc() * 0.03;
+                  ((Barbaro)jugadores.get(op)).setAc(((Barbaro)jugadores.get(op)).getAc() + (int) temp);
+                }
+              }
+              if (jugadores.get(op) instanceof Mago) {
+                  if (((Mago)jugadores.get(op)).getHabilidad().contentEquals("Support")) {
+                  double temp = ((Mago)jugadores.get(op)).getAc() * 0.03;
+                  ((Mago)jugadores.get(op)).setAc(((Mago)jugadores.get(op)).getAc() + (int) temp);
+                }
+              }
+              if (jugadores.get(op) instanceof Barbaro) {
+              if (((Barbaro)jugadores.get(op)).getAbilidad().contentEquals("Offensive")) {
+                  double temp = ((Barbaro)jugadores.get(op)).getDg() * 0.05;
+                  ((Barbaro)jugadores.get(op)).setDg(((Barbaro)jugadores.get(op)).getDg() + (int) temp);
+                }
+              }
+              if (jugadores.get(op) instanceof Picaro) {
+              if (((Picaro)jugadores.get(op)).getHabilidad().contentEquals("Spammer")) {
+                  double temp = ((Picaro)jugadores.get(op)).getDg() * 0.03;
+                  ((Picaro)jugadores.get(op)).setAc(((Picaro)jugadores.get(op)).getDg() + (int) temp);
+                  temp = ((Picaro)jugadores.get(op)).getAc() * 0.02;
+                  ((Picaro)jugadores.get(op)).setAc(((Picaro)jugadores.get(op)).getAc() + (int) temp);
+                }
+              }
+              if (jugadores.get(op) instanceof Picaro) {
+              if (((Picaro)jugadores.get(op)).getHabilidad().contentEquals("Tank")) {
+                  double temp = ((Picaro)jugadores.get(op)).getHp() * 0.02;
+                  ((Picaro)jugadores.get(op)).setHp(((Picaro)jugadores.get(op)).getHp() + (int) temp);
+                }
+              }
+              if (jugadores.get(op) instanceof Mago) {
+              if (((Mago)jugadores.get(op)).getHabilidad().contentEquals("Tank")) {
+                  double temp = ((Mago)jugadores.get(op)).getHp() * 0.02;
+                  ((Mago)jugadores.get(op)).setHp(((Mago)jugadores.get(op)).getHp() + (int) temp);
+                }
+              }
+              
+              System.out.println("Que accion quiere tomar?\n"
+                      + "1. Atacar\n"
+                      + "2. Defender");
+              int accion = lea.nextInt();
+              
+              switch (accion) {
+              case 1: {
+              
+            }
+            break;
+              case 2: {
+                  if (jugadores.get(op) instanceof Barbaro) {
+                      ((Barbaro)jugadores.get(op)).setAc(((Barbaro)jugadores.get(op)).getAc() + 15);
+                  }
+                  if (jugadores.get(op) instanceof Clerigo) {
+                      ((Clerigo)jugadores.get(op)).setAc(((Clerigo)jugadores.get(op)).getAc() + 15);
+                  }
+                  if (jugadores.get(op) instanceof Mago) {
+                      ((Mago)jugadores.get(op)).setAc(((Mago)jugadores.get(op)).getAc() + 15);
+                  }
+                  if (jugadores.get(op) instanceof Picaro) {
+                      ((Picaro)jugadores.get(op)).setAc(((Picaro)jugadores.get(op)).getAc() + 15);
+                  }
+              }
+              break;
         }
+        }
+        //}
         break;
         
         case 6: {

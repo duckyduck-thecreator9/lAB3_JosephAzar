@@ -18,18 +18,12 @@ public class Clerigo extends Jugador{
     private int dg = 5 + r.nextInt(15);
     private String dem;
     private String tipoinv;
+    private String habilidad;
 
-    public Clerigo(String dem, String tipoinv, String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp) {
+    public Clerigo(String dem, String tipoinv, String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp, String habilidad) {
         super(nombre, nacionalidad, raza, tipo, descripcion, estatura, anos, peso, hp);
         this.dem = dem;
         this.tipoinv = tipoinv;
-    }
-
-    
-
-    @Override
-    public String toString() {
-        return "Picaro{" + " ac=" + ac + ", cs=" + cs + ", dg=" + dg + '}';
     }
       
     public int getAc() {
@@ -72,8 +66,16 @@ public class Clerigo extends Jugador{
         this.tipoinv = tipoinv;
     }
 
+    public String getHabilidad() {
+        return habilidad;
+    }
+
+    public void setHabilidad(String habilidad) {
+        this.habilidad = habilidad;
+    }
+
     @Override
     public void print() {
-        System.out.println("ac: " + ac + " cs: : " + cs + " dg: " + dg + " Demonio: " + dem + " Tipo de invocacion" + tipoinv);
+        System.out.println("ac: " + ac + " cs: : " + cs + " dg: " + dg + " Demonio: " + dem + " Tipo de invocacion" + tipoinv + " Habilidad: " + habilidad);
     }
 }

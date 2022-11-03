@@ -16,14 +16,10 @@ public class Picaro extends Jugador{
     private int dg = 15 + r.nextInt(10);;
     private String instrumento;
     private int cantrob;
+    private String Habilidad;
 
-    public Picaro(String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp, String instrumento, int cantrob) {
+    public Picaro(String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp, String instrumento, int cantrob, String Habilidad) {
         super(nombre, nacionalidad, raza, tipo, descripcion, estatura, anos, peso, hp);
-    }
-
-    @Override
-    public String toString() {
-        return "Picaro{" + " ac=" + ac + ", cs=" + cs + ", dg=" + dg + '}';
     }
   
     public int getCs() {
@@ -65,10 +61,18 @@ public class Picaro extends Jugador{
     public void setCantrob(int cantrob) {
         this.cantrob = cantrob;
     }
+
+    public String getHabilidad() {
+        return Habilidad;
+    }
+
+    public void setHabilidad(String Habilidad) {
+        this.Habilidad = Habilidad;
+    }
     
 
     @Override
     public void print() {
-        System.out.println("ac: " + ac + " cs: : " + cs + " dg: " + dg + " Instrumento: " + instrumento + " Cantidades de robos: " + cantrob);
+        System.out.println("ac: " + ac + " cs: : " + cs + " dg: " + dg + " Instrumento: " + instrumento + " Cantidades de robos: " + cantrob + " Habilidad: " + Habilidad);
     }
 }

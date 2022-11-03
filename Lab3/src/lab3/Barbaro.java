@@ -16,11 +16,12 @@ public class Barbaro extends Jugador{
     private int dg = 15 + r.nextInt(15);
     private String arma;
     private int xp;
+    private String abilidad;
 
-    public Barbaro(String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp, String arma, int xp) {
+    public Barbaro(String nombre, String nacionalidad, String raza, String tipo, String descripcion, double estatura, int anos, double peso, int hp, String arma, int xp, String abilidad) {
         super(nombre, nacionalidad, raza, tipo, descripcion, estatura, anos, peso, hp);
     }
-    
+
     public int getAc() {
         return ac;
     }
@@ -36,7 +37,7 @@ public class Barbaro extends Jugador{
     public void setCs(int cs) {
         this.cs = cs;
     }
-
+    
     public int getDg() {
         return dg;
     }
@@ -63,7 +64,15 @@ public class Barbaro extends Jugador{
 
     @Override
     public void print() {
-        System.out.println("ac: " + ac + " cs: : " + cs + " dg: " + dg + " Arma: " + arma + " cantidad de xp: " + xp);
+        System.out.println("ac: " + ac + " cs: : " + cs + " dg: " + dg + " Arma: " + arma + " cantidad de xp: " + xp + " Habilidad: " + abilidad);
+    }
+
+    public String getAbilidad() {
+        return abilidad;
+    }
+
+    public void setAbilidad(String abilidad) {
+        this.abilidad = abilidad;
     }
 
     
